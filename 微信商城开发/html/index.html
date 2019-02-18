@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/theme-color.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="zyw-header">
+    <div class="zyw-container white-color">
+        <div class="head-l"><i class="head-l-svg" aria-hidden="true"></i></div>
+        <div class="head-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder="输入您当前要搜索的商品" class="white-color">
+        </div>
+        <div class="head-r"><a href="cart.html"><i class="head-r-svg" aria-hidden="true"></i><i class="head-length">8</i></a></div>
+    </div>
+</header>
+<footer class="zyw-footer">
+    <div class="zyw-container white-bgcolor clearfix">
+        <div class="weui-tabbar">
+            <a href="index.html" class="weui-tabbar__item weui-bar__item--on">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-1-1.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">首页</p>
+            </a>
+            <a href="class.html" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-2.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">分类</p>
+            </a>
+            <a href="cart.html" class="weui-tabbar__item">
+                <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-4.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">购物车</p>
+            </a>
+            <a href="home.html" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-5.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">我的</p>
+            </a>
+        </div>
+    </div>
+</footer>
+<section class="zyw-container">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="banner">
+            
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="index-class white-bgcolor">
+        <div class="weui-flex">
+            <div class="weui-flex__item">
+                <a href="javascript:;">
+                    <div class="index-class-img">
+                        <img src="./img/yqyl.png" alt="">
+                    </div>
+                    <p class="index-class-text">邀请有礼</p>
+                </a>
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:;">
+                    <div class="index-class-img">
+                        <img src="./img/cjfl.png" alt="">
+                    </div>
+                    <p class="index-class-text">春节福利</p>
+                </a>
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:;">
+                    <div class="index-class-img">
+                        <img src="./img/kbsc.png" alt="">
+                    </div>
+                    <p class="index-class-text">酷币商城</p>
+                </a>
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:;">
+                    <div class="index-class-img">
+                        <img src="./img/sjtx.png" alt="">
+                    </div>
+                    <p class="index-class-text">手机通讯</p>
+                </a>
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:;">
+                    <div class="index-class-img">
+                        <img src="./img/sjpj.png" alt="">
+                    </div>
+                    <p class="index-class-text">手机配件</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="index-news">
+        <div class="news-cont white-bgcolor">
+            <strong>最新<em>资讯</em>：</strong>
+            <div class="infoBox">
+                <ul class="swiper-wrapper">
+                    
+                </ul>
+            </div>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            <a href="" class="news-more">更多</a>
+        </div>
+    </div>
+    <div class="index-wares">
+        <div class="wares-title"><img src="http://gw.alicdn.com/tfs/TB1Aw9JSVXXXXXQXXXXXXXXXXXX-1500-68.png" alt=""></div>
+        <div class="wares-cont">
+            <ul class="clearfix">
+                
+            </ul>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    // 轮播
+    $(document).ready(function () {
+        var baseurl='/t/api/';//API基本地址
+
+        //获取BANNER列表
+        $.getJSON(baseurl,{ac:'banner'},function(r,s){
+            if(s=='success'){
+                var banner_list='';
+                $.each(r,function(i,its){
+                    banner_list += '<div class="swiper-slide"><a href="' + its.url + '" target="_balnk"><img src="' + its.img + '" alt="' + its.title + '"></a></div>';
+                });
+                $('#banner').html(banner_list);
+                // 顶部轮播图
+                var mySwiper = new Swiper ('.swiper-container', {
+                    // 如果需要分页器
+                    autoplay:true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+            }else{
+                alert('调用接口失败');
+            }
+        });
+
+        //最新资讯
+        $.getJSON(baseurl,{ac:'news'},function(r,s){
+            if(s!='success'){
+                alert('调用接口失败');
+                return ;
+            }
+            var news='';
+            $.each(r,function(i,its){
+                news += '<li class="swiper-slide"><a href="infos/' + its.id + '"><span>' + (its.ishot?'<i>热</i>':'') +  its.title + '</span></a></li>';
+            });
+            $('.infoBox ul').html(news);
+            // 新闻资讯
+            var swiper2 = new Swiper('.infoBox', {
+                autoplay:true,
+                delay: 5000,
+                direction: 'vertical'
+            });
+        });
+
+        //商品列表
+        $.getJSON(baseurl,{ac:'index_good'},function(r,s){
+            if(s!='success'){
+                alert('调用接口失败');
+                return ;
+            }
+            var goods='';
+            $.each(r,function(i,its){
+                goods += '<li class="col-sm-6 col-xs-6 ware-box">'
+                       + '<a href="item.html?id=' + its.id + '">'
+                       + '<div class="ware-img">'
+                       + '<img src="' + its.img + '" alt="' + its.title + '" title="' + its.title + '">'
+                       + '</div>'
+                       + '<h3 class="ware-title">' + its.title + '</h3>'
+                       + '<p class="ware-des">' + its.stitle + '</p>'
+                       + '<span class="ware-prince red-color">￥' + its.price + '</span>'
+                       + '</a></li>';
+            });
+            $('.wares-cont ul').html(goods);
+        });
+
+    })
+</script>
+</body>
+</html>

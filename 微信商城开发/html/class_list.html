@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/theme-color.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="zyw-header">
+    <div class="zyw-container white-color">
+        <div class="head-l"><a href="javascript:window.history.back(-1)" target="_self"><img src="img/svg/head-return.svg" alt=""></a></div>
+        <div class="head-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder="输入您当前要搜索的商品" class="white-color">
+        </div>
+        <div class="head-r"><a href="">取消</a></div>
+    </div>
+</header>
+<footer class="zyw-footer">
+    <div class="zyw-container white-bgcolor clearfix">
+        <div class="weui-tabbar">
+            <a href="index.html" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-1.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">首页</p>
+            </a>
+            <a href="class.html" class="weui-tabbar__item weui-bar__item--on">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-2-1.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">分类</p>
+            </a>
+            <a href="cart.html" class="weui-tabbar__item">
+                <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-4.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">购物车</p>
+            </a>
+            <a href="home.html" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon">
+                    <img src="./img/svg/foot-5.svg" alt="">
+                </div>
+                <p class="weui-tabbar__label">我的</p>
+            </a>
+        </div>
+    </div>
+</footer>
+<section class="zyw-container">
+    <div class="index-wares">
+        <div class="wares-cont">
+            <ul class="clearfix">
+                
+            </ul>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var baseurl = '/t/api/';//API基本地址
+        var id = GF('id'); //获取ID的值
+        //商品列表
+        $.getJSON(baseurl,{ac:'get_good_list',id:id},function(r,s){
+            if(s!='success'){
+                alert('调用接口失败');
+                return ;
+            }
+            var goods='';
+            $.each(r,function(i,its){
+                goods += '<li class="col-sm-6 col-xs-6 ware-box">'
+                       + '<a href="item.html?id=' + its.id + '">'
+                       + '<div class="ware-img">'
+                       + '<img src="' + its.img + '" alt="' + its.title + '" title="' + its.title + '">'
+                       + '</div>'
+                       + '<h3 class="ware-title">' + its.title + '</h3>'
+                       + '<p class="ware-des">' + its.stitle + '</p>'
+                       + '<span class="ware-prince red-color">￥' + its.price + '</span>'
+                       + '</a></li>';
+            });
+            $('.wares-cont ul').html(goods);
+        });
+    })
+</script>
+</body>
+</html>
